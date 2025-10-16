@@ -1,0 +1,105 @@
+/* ----- GENERAL STYLES ----- */
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+}
+
+/* ----- LOGIN PAGE STYLES ----- */
+/*
+  The following rules work together to center the login form.
+  We make the body a flex container only if its *single direct child*
+  is a form element. This is true for login.html but not uwagi.html.
+*/
+body:has(> form:only-child) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* The login form itself */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: clamp(300px, 90%, 400px); /* Responsive width */
+}
+
+form input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* ----- UWAGI PAGE STYLES ----- */
+/*
+  These styles target the semantic structure of uwagi.html
+  (header, main, footer). They won't apply to login.html.
+*/
+body:not(:has(> form:only-child)) {
+    padding: 2rem;
+}
+
+header, main, footer {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+main {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Content inside the uwagi article */
+article h2, article h3 {
+    color: #343a40;
+}
+
+article p, article li {
+    line-height: 1.7;
+}
+
+article code {
+    background-color: #e9ecef;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: monospace;
+}

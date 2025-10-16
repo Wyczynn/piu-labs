@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Uwagi o formularzach HTML</title>
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <h1>Uwagi na temat formularzy HTML</h1>
+  </header>
+  <main>
+    <article>
+      <header>
+        <h2>Klucz do interakcji w internecie</h2>
+        <p>Formularze HTML są podstawowym mechanizmem do zbierania danych od użytkowników. Od prostego pola wyszukiwania po skomplikowane formularze rejestracyjne, stanowią one most między użytkownikiem a aplikacją internetową.</p>
+      </header>
+
+      <section>
+        <h3>Kiedy warto stosować formularze?</h3>
+        <p>Formularze są niezastąpione, gdy potrzebujemy zebrać i wysłać dane na serwer. Idealnie sprawdzają się w sytuacjach takich jak:</p>
+        <ul>
+          <li>Logowanie i rejestracja użytkowników.</li>
+          <li>Składanie zamówień w sklepach internetowych.</li>
+          <li>Wypełnianie ankiet i sondaży.</li>
+          <li>Wysyłanie wiadomości przez formularze kontaktowe.</li>
+          <li>Przesyłanie plików na serwer.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Kiedy ich użycie może nie być najlepszym pomysłem?</h3>
+        <p>Chociaż formularze są potężne, nie są rozwiązaniem na wszystko. Należy unikać ich używania do:</p>
+        <ul>
+          <li><strong>Nawigacji:</strong> Do przechodzenia między stronami służą linki (<code>&lt;a&gt;</code>). Używanie przycisków formularza do nawigacji jest nieintuicyjne i niepoprawne semantycznie.</li>
+          <li><strong>Akcji bez przesyłania danych:</strong> Jeśli przycisk ma wywołać akcję po stronie klienta (np. ukryć/pokazać element) bez wysyłania danych, lepiej użyć elementu <code>&lt;button type="button"&gt;</code> poza formularzem i obsłużyć go za pomocą JavaScript.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Dobre praktyki i semantyka</h3>
+        <p>Prawidłowe użycie elementów semantycznych nie tylko poprawia strukturę kodu, ale także dostępność i SEO.</p>
+        <ul>
+          <li>Zawsze łącz etykietę <code>&lt;label&gt;</code> z polem formularza za pomocą atrybutu <code>for</code>. Dzięki temu kliknięcie etykiety aktywuje pole.</li>
+          <li>Używaj odpowiednich typów pól <code>&lt;input&gt;</code> (np. <code>type="email"</code>, <code>type="date"</code>, <code>type="number"</code>). Zapewnia to walidację i lepszy interfejs użytkownika na urządzeniach mobilnych.</li>
+          <li>Grupuj powiązane pola (np. zestaw pól radio) za pomocą <code>&lt;fieldset&gt;</code> i dodaj opis grupy w <code>&lt;legend&gt;</code>.</li>
+        </ul>
+
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>Stworzone w ramach laboratorium. Powrót na <a href="..">stronę główną projektu</a>.</p>
+  </footer>
+</body>
+</html>

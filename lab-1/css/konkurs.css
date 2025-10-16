@@ -1,0 +1,159 @@
+/* Basic Setup */
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    color-scheme: light;
+}
+
+/* Page Container */
+.page-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Header and Theme Switcher */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.theme-switcher {
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+/* Hide the theme toggle checkbox */
+.theme-toggle-checkbox {
+    display: none;
+}
+
+/* Form Container */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: background-color 0.3s;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: -10px;
+}
+
+/* Inputs, Select */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[list],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+input[type="color"] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Fieldset and Legend */
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+legend {
+    padding: 0 5px;
+}
+
+/* Radio and Checkbox */
+.radio-label,
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* --- DARK MODE --- */
+#theme-toggle:checked + .page-container body, /* This is for when body is inside */
+body:has(#theme-toggle:checked) { /* More robust selector */
+    color: #f4f4f4;
+    color-scheme: dark;
+}
+
+#theme-toggle:checked ~ .page-container form {
+    background-color: #444;
+}
+
+#theme-toggle:checked ~ .page-container input[type="text"],
+#theme-toggle:checked ~ .page-container input[type="email"],
+#theme-toggle:checked ~ .page-container input[type="date"],
+#theme-toggle:checked ~ .page-container input[type="number"],
+#theme-toggle:checked ~ .page-container input[list],
+#theme-toggle:checked ~ .page-container select {
+    background-color: #555;
+    color: #f4f4f4;
+    border-color: #666;
+}
+
+#theme-toggle:checked ~ .page-container fieldset,
+#theme-toggle:checked ~ .page-container input[type="color"] {
+    border-color: #666;
+}
