@@ -1,19 +1,55 @@
-/* Minimalny reset  */
-html {
-  font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: system-ui, sans-serif; /* font systemowy */
-  line-height: 1.5; /* lepsza czytelność */
-}
 body {
-  margin: 1rem;
-  padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-a {
-  color: #0066cc; /* niebieski kolor linków */
-  text-decoration: none; /* bez podkreślenia */
-  font-size: 1.4rem;
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
-a:hover {
-  text-decoration: underline; /* podkreślenie przy najechaniu */
+
+nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+nav a {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #3498db;
+    color: #ffffff;
+    border-color: #3498db;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body > a {
+    color: #7f8c8d;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+body > a:hover {
+    text-decoration: underline;
 }
