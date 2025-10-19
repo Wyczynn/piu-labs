@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Figure - kontener dla zdjęcia */
+figure {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Picture i img */
+picture {
+    display: block;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+figure:hover img {
+    transform: scale(1.05);
+}
+
+figcaption {
+    padding: 15px 20px;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 800px) {
+    .gallery {
+        gap: 40px;
+        max-width: 1000px;
+    }
+
+    figure {
+        max-width: 1000px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    figcaption {
+        font-size: 1.1rem;
+        padding: 20px 25px;
+    }
+}
+
+/* 1200-1599px - 2 kolumny, obrazy 500px */
+@media (min-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(2, 500px);
+        gap: 30px;
+        max-width: 1030px;
+    }
+
+    figure {
+        max-width: 500px;
+    }
+
+    figure:hover {
+        transform: translateY(-8px);
+    }
+}
+
+/* >= 1600px - 2 kolumny, obrazy 1000px */
+@media (min-width: 1600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1000px);
+        gap: 40px;
+        max-width: 2040px;
+    }
+
+    figure {
+        max-width: 1000px;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    figcaption {
+        font-size: 1.2rem;
+        padding: 25px 30px;
+    }
+}
