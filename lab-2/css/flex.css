@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
+}
+
+header,
+.container {
+    border: 2px solid #d3b88a;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f5eeda;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+}
+
+.item {
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    min-height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+body:has(input[value="blue"]:checked) {
+    & .item {
+        background-color: blue;
+    }
+
+    & .container {
+        flex-direction: column;
+        align-items: center;
+
+        @media (width > 1024px) {
+            flex-flow: column wrap;
+            height: 150px;
+            align-content: space-between;
+            align-items: stretch;
+        }
+    }
+
+    & .item {
+        @media (width <= 1024px) {
+            width: 60%;
+        }
+
+        @media (width > 1024px) {
+            width: 30%;
+            height: calc(50% - .5rem);
+        }
+    }
+
+    & .item:nth-child(1) { @media (width > 1024px) { order: 1; } }
+    & .item:nth-child(4) { @media (width > 1024px) { order: 2; } }
+    & .item:nth-child(2) {
+        @media (width > 1024px) {
+            order: 3;
+            height: 50%;
+        }
+    }
+    & .item:nth-child(3) { @media (width > 1024px) { order: 4; } }
+    & .item:nth-child(5) { @media (width > 1024px) { order: 5; } }
+}
+
+body:has(input[value="red"]:checked) {
+    & .item {
+        background-color: red;
+    }
+
+    & .container {
+        @media (width <= 1024px) {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    & .item:nth-child(1) {
+        font-weight: bold;
+        flex-direction: column;
+
+        &::after {
+            content: '(Jestem większy i na środku!)';
+            font-weight: normal;
+            font-size: 80%;
+            margin-top: 0.5rem;
+        }
+
+        @media (width > 1024px) {
+            order: 3;
+            flex-basis: 25%;
+        }
+
+        @media (width <= 1024px) {
+            order: 2;
+            flex-basis: 100%;
+        }
+    }
+
+
+    & .item:nth-child(2) {
+        @media (width > 1024px) { order: 1; flex-grow: 1; }
+        @media (width <= 1024px) { order: 1; flex-basis: calc(50% - 0.5rem); }
+    }
+    & .item:nth-child(3) {
+        @media (width > 1024px) { order: 2; flex-grow: 1; }
+        @media (width <= 1024px) { order: 1; flex-basis: calc(50% - 0.5rem); }
+    }
+    & .item:nth-child(4) {
+        @media (width > 1024px) { order: 4; flex-grow: 1; }
+        @media (width <= 1024px) { order: 3; flex-basis: calc(50% - 0.5rem); }
+    }
+    & .item:nth-child(5) {
+        @media (width > 1024px) { order: 5; flex-grow: 1; }
+        @media (width <= 1024px) { order: 3; flex-basis: calc(50% - 0.5rem); }
+    }
+}
+
+body:has(input[value="green"]:checked) {
+    & .item {
+        background-color: green;
+    }
+
+    & .container {
+        align-items: center;
+
+        @media (width <= 1024px) {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+    }
+
+    & .item:nth-child(1) {
+        &::before, &::after {
+            content: '😀';
+            font-size: 2em;
+            line-height: 0;
+        }
+        &::before { padding-right: 0.5em; }
+        &::after { padding-left: 0.5em; }
+    }
+
+    & .item:nth-child(1) {
+        @media (width > 1024px) { flex-grow: 5; }
+        @media (width <= 1024px) { width: 100%; }
+    }
+    & .item:nth-child(2) {
+        @media (width > 1024px) { flex-grow: 4; }
+        @media (width <= 1024px) { width: 80%; }
+    }
+    & .item:nth-child(3) {
+        @media (width > 1024px) { flex-grow: 3; }
+        @media (width <= 1024px) { width: 60%; }
+    }
+    & .item:nth-child(4) {
+        @media (width > 1024px) { flex-grow: 2; }
+        @media (width <= 1024px) { width: 40%; }
+    }
+    & .item:nth-child(5) {
+        @media (width > 1024px) { flex-grow: 1; }
+        @media (width <= 1024px) { width: 20%; }
+    }
+}
