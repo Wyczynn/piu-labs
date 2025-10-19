@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #f39c12;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #2980b9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a:last-child {
+    border-right: none;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+main {
+    grid-area: main;
+    background-color: #ecf0f1;
+    padding: 20px;
+}
+
+main h2 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+
+main p {
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #d5f4e6;
+    padding: 20px;
+}
+
+aside h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+aside p {
+    color: #333;
+    line-height: 1.6;
+}
+
+aside div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+aside span {
+    font-size: 3rem;
+    text-align: center;
+    display: block;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 1024px) {
+    body {
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 300px;
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main aside"
+            "footer footer";
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    main {
+        padding: 30px;
+    }
+
+    aside div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
