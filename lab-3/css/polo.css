@@ -1,0 +1,309 @@
+body {
+    --primary-color: #3b9363;
+    --primary-dark: #2d7049;
+    --border-color: #3b9363;
+    --badge-bg: #3b9363;
+    --image-border: #3b9363;
+}
+
+#color-blue:checked ~ .product-card {
+    --primary-color: #337ab7;
+    --primary-dark: #286090;
+    --border-color: #337ab7;
+    --badge-bg: #337ab7;
+    --image-border: #337ab7;
+}
+
+#color-red:checked ~ .product-card {
+    --primary-color: #d9534f;
+    --primary-dark: #c9302c;
+    --border-color: #d9534f;
+    --badge-bg: #d9534f;
+    --image-border: #d9534f;
+}
+
+#color-green:checked ~ .product-card {
+    --primary-color: #3b9363;
+    --primary-dark: #2d7049;
+    --border-color: #3b9363;
+    --badge-bg: #3b9363;
+    --image-border: #3b9363;
+}
+
+#color-yellow:checked ~ .product-card {
+    --primary-color: #f0ad4e;
+    --primary-dark: #ec971f;
+    --border-color: #f0ad4e;
+    --badge-bg: #f0ad4e;
+    --image-border: #f0ad4e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f0f0;
+    padding: clamp(10px, 2vw, 20px);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: min(860px, 100%);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    container-type: inline-size;
+}
+
+.product-image {
+    width: clamp(280px, calc(100% - 40px), 500px);
+    height: clamp(280px, calc(100vw - 60px), 500px);
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    border: 3px solid var(--image-border);
+    border-radius: 8px;
+    margin: 20px;
+    overflow: hidden;
+    background: white;
+    position: relative;
+}
+
+@container (min-width: 750px) {
+    .product-image {
+        margin-left: 30px;
+    }
+}
+
+.product-image > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.shirt-blue {
+    background-image: url("../img/polo_b.png");
+}
+
+.shirt-red {
+    background-image: url("../img/polo_r.png");
+}
+
+.shirt-green {
+    background-image: url("../img/polo_g.png");
+}
+
+.shirt-yellow {
+    background-image: url("../img/polo_y.png");
+}
+
+#color-blue:checked ~ .product-card .shirt-blue {
+    opacity: 1;
+}
+
+#color-red:checked ~ .product-card .shirt-red {
+    opacity: 1;
+}
+
+#color-green:checked ~ .product-card .shirt-green {
+    opacity: 1;
+}
+
+#color-yellow:checked ~ .product-card .shirt-yellow {
+    opacity: 1;
+}
+
+.product-info {
+    width: clamp(280px, 100%, 300px);
+    flex: 1;
+    min-width: min(280px, 100%);
+    padding: clamp(20px, 3vw, 30px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.product-title {
+    font-size: clamp(24px, 4vw, 28px);
+    color: #333;
+    font-weight: 700;
+}
+
+.product-badge {
+    background: var(--badge-bg);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.product-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.size-options input[type="radio"] {
+    display: none;
+}
+
+.color-options {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.color-option {
+    width: clamp(38px, 6vw, 42px);
+    height: clamp(38px, 6vw, 42px);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-blue {
+    background: #337ab7;
+}
+
+.color-red {
+    background: #d9534f;
+}
+
+.color-green {
+    background: #3b9363;
+}
+
+.color-yellow {
+    background: #f0ad4e;
+}
+
+#color-blue:checked ~ .product-card .color-blue,
+#color-red:checked ~ .product-card .color-red,
+#color-green:checked ~ .product-card .color-green,
+#color-yellow:checked ~ .product-card .color-yellow {
+    border-color: #333;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #333;
+}
+
+.size-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.size-option {
+    min-width: clamp(45px, 8vw, 50px);
+    height: clamp(45px, 8vw, 50px);
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: clamp(14px, 2vw, 16px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    color: #333;
+    flex: 1;
+}
+
+.size-option:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+input[type="radio"]:checked + .size-option {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.product-price {
+    font-size: clamp(28px, 5vw, 32px);
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.add-to-cart {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart:active {
+    transform: translateY(0);
+}
+
+.cart-icon {
+    width: 20px;
+    height: 20px;
+}
