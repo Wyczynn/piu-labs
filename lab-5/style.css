@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.add-square {
+  background: #ff6b6b;
+  color: white;
+}
+
+.add-circle {
+  background: #4ecdc4;
+  color: white;
+}
+
+.color-squares {
+  background: #ff8787;
+  color: white;
+}
+
+.color-circles {
+  background: #6fddcf;
+  color: white;
+}
+
+.counters {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #333;
+}
+
+.counter-icon {
+  font-size: 1.5em;
+}
+
+.shapes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  min-height: 200px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.shape {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shape:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.shape.square {
+  border-radius: 8px;
+}
+
+.shape.circle {
+  border-radius: 50%;
+}
+
+.empty-message {
+  width: 100%;
+  text-align: center;
+  color: #999;
+  font-size: 1.2em;
+  padding: 40px;
+}
