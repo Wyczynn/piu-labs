@@ -1,0 +1,32 @@
+<div class="image-container">
+  <slot name="image"></slot>
+  <div class="promo-badge">
+    <slot name="promo"></slot>
+  </div>
+</div>
+
+<div class="content">
+  <h2 class="product-name">
+    <slot name="name">Product Name</slot>
+  </h2>
+
+  <div class="price">
+    <slot name="price">0.00 zł</slot>
+  </div>
+
+  <div class="colors-section">
+    <span class="label">Kolory:</span>
+    <div class="colors">
+      <slot name="colors"></slot>
+    </div>
+  </div>
+
+  <div class="sizes-section">
+    <span class="label">Rozmiary:</span>
+    <div class="sizes">
+      <slot name="sizes"></slot>
+    </div>
+  </div>
+
+  <button class="add-to-cart">Dodaj do koszyka</button>
+</div>
