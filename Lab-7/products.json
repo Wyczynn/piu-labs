@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "T-shirt Basic",
+    "price": 49.99,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop",
+    "promo": "-20%",
+    "colors": [
+      { "hex": "#000000", "name": "Czarny" },
+      { "hex": "#FFFFFF", "name": "Biały" },
+      { "hex": "#1E3A8A", "name": "Niebieski" },
+      { "hex": "#DC2626", "name": "Czerwony" }
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"]
+  },
+  {
+    "id": 2,
+    "name": "Jeansy Slim Fit",
+    "price": 159.99,
+    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=500&fit=crop",
+    "colors": [
+      { "hex": "#1E3A8A", "name": "Niebieski" },
+      { "hex": "#000000", "name": "Czarny" },
+      { "hex": "#6B7280", "name": "Szary" }
+    ],
+    "sizes": ["28", "30", "32", "34", "36"]
+  },
+  {
+    "id": 3,
+    "name": "Bluza z kapturem",
+    "price": 129.99,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=500&fit=crop",
+    "promo": "NOWOŚĆ",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 4,
+    "name": "Kurtka skórzana",
+    "price": 399.99,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=500&fit=crop",
+    "colors": [
+      { "hex": "#000000", "name": "Czarny" },
+      { "hex": "#78350F", "name": "Brązowy" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Sukienka letnia",
+    "price": 89.99,
+    "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop",
+    "promo": "-30%",
+    "colors": [
+      { "hex": "#FEF3C7", "name": "Żółty" },
+      { "hex": "#DBEAFE", "name": "Niebieski" },
+      { "hex": "#FEE2E2", "name": "Różowy" }
+    ],
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "id": 6,
+    "name": "White T-Shirt",
+    "price": 119.99,
+    "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=500&fit=crop"
+  }
+]

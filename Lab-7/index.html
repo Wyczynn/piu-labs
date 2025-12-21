@@ -5,88 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab-7 - Karta produktu</title>
   <link rel="stylesheet" href="./style.css">
-  <script type="module" src="./components/product-card.js"></script>
+  <script type="module" src="./main.js"></script>
 </head>
 <body>
   <h1>Sklep z odzieżą - Lab 7</h1>
 
-  <div class="products-grid">
-
-    <!-- Produkt 1: T-shirt z pełnymi opcjami i promocją -->
-    <product-card>
-      <img slot="image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" alt="T-shirt Basic">
-      <span slot="name">T-shirt Basic</span>
-      <span slot="price">49.99 zł</span>
-      <span slot="promo">-20%</span>
-      <span slot="colors" class="color-dot" style="background: #000000;" title="Czarny"></span>
-      <span slot="colors" class="color-dot" style="background: #FFFFFF; border-color: #999;" title="Biały"></span>
-      <span slot="colors" class="color-dot" style="background: #1E3A8A;" title="Niebieski"></span>
-      <span slot="colors" class="color-dot" style="background: #DC2626;" title="Czerwony"></span>
-      <span slot="sizes" class="size-btn">XS</span>
-      <span slot="sizes" class="size-btn">S</span>
-      <span slot="sizes" class="size-btn">M</span>
-      <span slot="sizes" class="size-btn">L</span>
-      <span slot="sizes" class="size-btn">XL</span>
-    </product-card>
-
-    <!-- Produkt 2: Jeansy bez promocji -->
-    <product-card>
-      <img slot="image" src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=500&fit=crop" alt="Jeansy Slim Fit">
-      <span slot="name">Jeansy Slim Fit</span>
-      <span slot="price">159.99 zł</span>
-      <span slot="colors" class="color-dot" style="background: #1E3A8A;" title="Niebieski"></span>
-      <span slot="colors" class="color-dot" style="background: #000000;" title="Czarny"></span>
-      <span slot="colors" class="color-dot" style="background: #6B7280;" title="Szary"></span>
-      <span slot="sizes" class="size-btn">28</span>
-      <span slot="sizes" class="size-btn">30</span>
-      <span slot="sizes" class="size-btn">32</span>
-      <span slot="sizes" class="size-btn">34</span>
-      <span slot="sizes" class="size-btn">36</span>
-    </product-card>
-
-    <!-- Produkt 3: Bluza bez kolorów -->
-    <product-card>
-      <img slot="image" src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=500&fit=crop" alt="Bluza z kapturem">
-      <span slot="name">Bluza z kapturem</span>
-      <span slot="price">129.99 zł</span>
-      <span slot="promo">NOWOŚĆ</span>
-      <span slot="sizes" class="size-btn">S</span>
-      <span slot="sizes" class="size-btn">M</span>
-      <span slot="sizes" class="size-btn">L</span>
-      <span slot="sizes" class="size-btn">XL</span>
-    </product-card>
-
-    <!-- Produkt 4: Kurtka bez rozmiarów -->
-    <product-card>
-      <img slot="image" src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=500&fit=crop" alt="Kurtka skórzana">
-      <span slot="name">Kurtka skórzana</span>
-      <span slot="price">399.99 zł</span>
-      <span slot="colors" class="color-dot" style="background: #000000;" title="Czarny"></span>
-      <span slot="colors" class="color-dot" style="background: #78350F;" title="Brązowy"></span>
-    </product-card>
-
-    <!-- Produkt 5: Sukienka z promocją -->
-    <product-card>
-      <img slot="image" src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop" alt="Sukienka letnia">
-      <span slot="name">Sukienka letnia</span>
-      <span slot="price">89.99 zł</span>
-      <span slot="promo">-30%</span>
-      <span slot="colors" class="color-dot" style="background: #FEF3C7;" title="Żółty"></span>
-      <span slot="colors" class="color-dot" style="background: #DBEAFE;" title="Niebieski"></span>
-      <span slot="colors" class="color-dot" style="background: #FEE2E2;" title="Różowy"></span>
-      <span slot="sizes" class="size-btn">XS</span>
-      <span slot="sizes" class="size-btn">S</span>
-      <span slot="sizes" class="size-btn">M</span>
-      <span slot="sizes" class="size-btn">L</span>
-    </product-card>
-
-    <!-- Produkt 6: Minimalistyczny - tylko podstawowe info -->
-    <product-card>
-      <img slot="image" src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=500&fit=crop" alt="Spódnica midi">
-      <span slot="name">White T-Shirt</span>
-      <span slot="price">119.99 zł</span>
-    </product-card>
-
+  <div class="shop-container">
+    <product-list></product-list>
+    <shopping-cart></shopping-cart>
   </div>
 </body>
 </html>
